@@ -19,8 +19,8 @@ class WPClient:
 
     def get(self, endpoint: Optional[int] = None) -> None:
         if(endpoint == None):
-            response: Response = requests.get(f"{self.url!r}", auth=self.auth)
-        response = requests.get(f"{self.url!r}/{endpoint!r}", auth=self.auth)
+            response: Response = requests.get(f"{self.url}", auth=self.auth)
+        response = requests.get(f"{self.url}/{endpoint}", auth=self.auth)
         print(response.status_code, json.dumps(response.json(), indent=2))
 
     def post(self, payload: dict[str, str]) -> None:
@@ -28,15 +28,15 @@ class WPClient:
         print(response.status_code, json.dumps(response.json(), indent=2))
 
     def patch(self, endpoint: int, payload: dict[str, str]) -> None:
-        response: Response = requests.patch(f"{self.url!r}/{endpoint!r}", auth=self.auth, data=payload)
+        response: Response = requests.patch(f"{self.url}/{endpoint}", auth=self.auth, data=payload)
         print(response.status_code, json.dumps(response.json(), indent=2))
 
     def put(self, endpoint: int, payload: dict[str, str]) -> None:
-        response: Response = requests.put(f"{self.url!r}/{endpoint!r}", auth=self.auth, data=payload)
+        response: Response = requests.put(f"{self.url}/{endpoint}", auth=self.auth, data=payload)
         print(response.status_code, json.dumps(response.json(), indent=2))
 
     def delete(self, endpoint: int) -> None:
-        response: Response = requests.delete(f"{self.url!r}/{endpoint!r}", auth=self.auth)
+        response: Response = requests.delete(f"{self.url}/{endpoint}", auth=self.auth)
         print(response.status_code, json.dumps(response.json(), indent=2))
 
 def main() -> None:
