@@ -26,8 +26,8 @@ if __name__ == "__main__":
                     wp_client.post(client,
                         payload =
                             {
-                                "title": "Test",
-                                "content": "Test",
+                                "title": "Lorem Ipsum",
+                                "content": "Lorem ipsum sit amet",
                                 "status": "publish"
                             }
                         ),
@@ -38,8 +38,8 @@ if __name__ == "__main__":
                     wp_client.patch(client, endpoint=4,
                         payload =
                             {
-                                "title": "Test",
-                                "content": "Test",
+                                "title": "съешь ещё этих мягких французских булок",
+                                "content": "да выпей чаю",
                                 "status": "publish"
                             }
                         ),
