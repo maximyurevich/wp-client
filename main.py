@@ -33,13 +33,13 @@ if __name__ == "__main__":
                         ),
 
                     wp_client.patch(client, endpoint=4, payload = {
-                        "title": "Hello",
+                        "title": "Съешь ещё этих мягких французских булок",
                     }),
-                    wp_client.patch(client, endpoint=4,
+                    wp_client.put(client, endpoint=4,
                         payload =
                             {
                                 "title": "съешь ещё этих мягких французских булок",
-                                "content": "да выпей чаю",
+                                "content": "Да выпей чаю",
                                 "status": "publish"
                             }
                         ),
