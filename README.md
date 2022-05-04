@@ -5,7 +5,7 @@ WordPress REST API Python Client based on aiohttp python library
 ## Installation
 
 ```bash
-pip install wp-client-py
+pip install wp-client-aio
 ```
 
 ## Usage
